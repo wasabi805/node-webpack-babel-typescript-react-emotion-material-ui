@@ -5,12 +5,13 @@ const _ = require("lodash");
 
 module.exports = {
   mode: "development",
-  entry: "./src/index.ts",
+  entry: "./src/index.tsx",
+  devtool: 'inline-source-map',
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "main.bundle.js",
   },
-  
+  devtool: 'inline-source-map',
   devServer: {
     static: {
       directory: path.resolve(__dirname, 'dist'),

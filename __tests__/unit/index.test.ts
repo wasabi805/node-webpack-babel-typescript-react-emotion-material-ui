@@ -1,9 +1,6 @@
 
-import IndexComponent from '../../src/index' 
-
 describe('test', ()=>{
     it('tests that 1 + 1 is equal to 2',()=>{
-        console.log( typeof IndexComponent )
         expect(1+1===2).toBe(true)
     })
 
