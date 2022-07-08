@@ -8,7 +8,9 @@
     "typescript": "tsc",
     "format": "npx prettier --write .",
     "test": "jest",
-    "dev": "webpack server"
+    "dev": "webpack server",
+    "start": "webpack-dev-server --open --mode development --hot",
+    "build": "webpack --mode production"
   },
   "jest": {
     "transform": {
@@ -29,8 +31,10 @@
     "@babel/core": "^7.18.6",
     "@babel/plugin-transform-typescript": "^7.18.6",
     "@babel/preset-env": "^7.18.6",
+    "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
     "@types/jest": "^28.1.4",
+    "@types/react-dom": "^18.0.6",
     "babel-loader": "^8.2.5",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.1",
@@ -39,6 +43,8 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^28.1.2",
     "prettier": "2.7.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "sass": "^1.53.0",
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",
@@ -50,6 +56,7 @@
     "webpack-dev-server": "^4.9.3"
   },
   "dependencies": {
+    "@types/react": "^18.0.15",
     "jest-cli": "^28.1.2",
     "jest-environment-jsdom": "^28.1.2",
     "lodash": "^4.17.21",
