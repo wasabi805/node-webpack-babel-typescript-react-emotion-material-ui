@@ -15,8 +15,7 @@
     "typescript": "^4.7.4"
   },
   "scripts": {
-    "server": "node app.ts --experimental-modules server.mjs",
-    "server1": "npx tsc"
+    "server": "node app.ts --experimental-modules server.mjs"
   },
   "author": "",
   "license": "ISC"
