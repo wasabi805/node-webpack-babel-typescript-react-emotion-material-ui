@@ -18,7 +18,6 @@ const App = () => {
             someBgColor: "lime",
           }}
         >
-          {" "}
           Some Button
         </Button>
         <ExtendedWrapper>THIS IS AN EXTENDED WRAPPER</ExtendedWrapper>
