@@ -30,7 +30,7 @@ The documentation below are the modifications to the configurations based off [t
         })
     })
 
-## Instalation
+## Installation
 
     npm install --save-dev react react-dom @babel/preset-react @types/react
 
@@ -141,3 +141,35 @@ Notice that we're targeting a dom node with the id of "root" : We'll need to upd
 ## Test the App
 
     npm run start
+
+# Styled Components | Emotion
+
+[docs for install emotion](https://emotion.sh/docs/install)
+[docs for @emotion/babel-plugin](https://github.com/emotion-js/emotion/tree/main/packages/babel-plugin)
+
+## Install emotion
+
+    npm install --save @emotion/react @emotion/styled
+
+## Instal @emotion/babel-plugin
+
+    npm install --save-dev @emotion/babel-plugin
+
+## Update babel configuration
+
+      // Inside babel.config.js
+
+      module.exports = {
+        presets: [
+        ...
+          '@babel/preset-env',
+          '@babel/preset-typescript',
+
+          // Add emotion to the presets
+          '@emotion'
+          ...
+        ],
+      };
+
+[extending styles](https://styled-components.com/docs/basics#extending-styles)
+[passed Props](https://styled-components.com/docs/basics#passed-props)

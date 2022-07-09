@@ -1,5 +1,3 @@
-@use "different-sass-file";
-
 body {
   background: black;
   color: white;
@@ -21,31 +19,6 @@ body {
   flex-direction: column;
   align-items: center;
 
-  .from-a-different-sass-file {
-    font-family: "Adistro";
-    font-size: 3rem;
-  }
-}
-
-.header {
-  font-family: killer-boots;
-  font-size: 10rem;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: cyan;
-}
-
-.logo {
-  display: inline-flex;
-  position: relative;
-  width: 30vw;
-  width: 500px;
-  height: 500px;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.logo img {
-  width: 100%;
-  height: 100%;
-  opacity: 0.75;
+  font-family: "Adistro";
+  font-size: 3rem;
 }

@@ -6,15 +6,15 @@ const _ = require("lodash");
 module.exports = {
   mode: "development",
   entry: "./src/index.tsx",
-  devtool: 'inline-source-map',
+  devtool: "inline-source-map",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "main.bundle.js",
   },
-  devtool: 'inline-source-map',
+  devtool: "inline-source-map",
   devServer: {
     static: {
-      directory: path.resolve(__dirname, 'dist'),
+      directory: path.resolve(__dirname, "dist"),
     },
     port: 3000,
     open: true,
@@ -31,12 +31,12 @@ module.exports = {
         test: /\.m?js$/,
         exclude: /(node_modules)/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env'],
-            plugins:['@babel/preset-typescript'],
-          }
-        }
+            presets: ["@babel/preset-env"],
+            plugins: ["@babel/preset-typescript"],
+          },
+        },
       },
 
       {
@@ -60,7 +60,7 @@ module.exports = {
             loader: "file-loader",
             options: {
               outputPath: "src/images",
-              name: '[path][name].[ext]',
+              name: "[path][name].[ext]",
             },
           },
         ],
