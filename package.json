@@ -56,8 +56,12 @@
     "webpack-dev-server": "^4.9.3"
   },
   "dependencies": {
-    "@emotion/react": "^11.9.3",
-    "@emotion/styled": "^11.9.3",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@material-ui/core": "^4.12.4",
+    "@mui/material": "^5.10.8",
+    "@mui/system": "^5.10.8",
+    "@types/material-ui": "^0.21.12",
     "@types/react": "^18.0.15",
     "jest-cli": "^28.1.2",
     "jest-environment-jsdom": "^28.1.2",
