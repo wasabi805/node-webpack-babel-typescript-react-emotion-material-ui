@@ -18,6 +18,8 @@ const LoadingTextContainer =  styled((props: any)=><Box {...props}/>)(({theme}: 
 
     // dont forget to return the style wrapped in css
     return css`
+        //  styles needed for animation
+
         & p {
             font-family: helvetica;
             font-size: 3rem;
@@ -33,17 +35,20 @@ const LoadingTextContainer =  styled((props: any)=><Box {...props}/>)(({theme}: 
             background-size: 300%;
             background-position: -100%;
 
-            animation: ${transistion} 1.2s infinite alternate-reverse;
+            animation: ${transistion} 3s infinite alternate-reverse;
         }
+
+        
+
     `
 })
 
 
 
-const LoadingText = () => {
+const LoadingText = ({sx}: any) => {
    
   return (
-    <LoadingTextContainer>
+    <LoadingTextContainer sx={sx}>
         <p className='text'>
         loading ...
         </p>

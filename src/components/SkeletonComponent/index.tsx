@@ -23,8 +23,20 @@ const SkeletonTableRow = ({}) => {
 
 const SkeletonComponent = () => {
   return (
-    <Box>
-      <LoadingText />
+    <Box sx={{position: 'relative'}} >
+
+      <LoadingText sx={{
+        position: 'absolute',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100%',
+        height: '100%',
+        background: '#6fcbcb29',
+        borderRadius: '5px',
+
+
+        }} />
 
       <Grid container id="skeleton-form-container">
         <Grid item xs={12} id="skelteon-header">
