@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Typography, Skeleton, Grid, List, ListItem } from "@mui/material";
+import LoadingText from "../LodingText";
 
 const rows = 5;
 
@@ -23,6 +24,8 @@ const SkeletonTableRow = ({}) => {
 const SkeletonComponent = () => {
   return (
     <Box>
+      <LoadingText />
+
       <Grid container id="skeleton-form-container">
         <Grid item xs={12} id="skelteon-header">
           <Typography variant="h1">{<Skeleton />}</Typography>
