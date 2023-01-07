@@ -2,6 +2,7 @@ import React, { MouseEvent } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Container, Box, Button } from "@mui/material";
 import { increment, decrement } from "../reducers/usersSlice";
+import SkeletonComponent from "./SkeletonComponent";
 
 const App = (): JSX.Element => {
   const dispatch = useDispatch();
@@ -12,11 +13,6 @@ const App = (): JSX.Element => {
     const { name } = e.currentTarget;
     dispatch(name === "dec" ? decrement() : increment());
   };
-
-
-
-
-
 
   const extractedKeys = ["inquiries", "bulkPrint", "inputField"];
 
@@ -31,43 +27,35 @@ const App = (): JSX.Element => {
   const stopAtKey = "inputField";
   const newInputs = "a full sting";
 
+  interface Iobj {}
 
-  interface Iobj{
-  }
-  
-  interface IProps{
-    fakeReducer: any,
-    stopAtKey : string
+  interface IProps {
+    fakeReducer: any;
+    stopAtKey: string;
   }
 
-  type Target = keyof Iobj | string
+  type Target = keyof Iobj | string;
 
   const changeInputField = ({ fakeReducer, stopAtKey }: IProps) => {
+    const dig = (currentObject: Iobj, target: Target): any => {
+      return target in currentObject
+        ? (currentObject as any)[target]
+        : Object.values(currentObject).reduce((acc, val: any) => {
+            console.log("what is acc, what is val", { acc, val });
 
-     const dig = (currentObject: Iobj , target : Target) : any =>{
-    
-      return target in currentObject ?  (currentObject as any)[ target ] : Object.values(currentObject).reduce((acc, val: any) => {
-        console.log('what is acc, what is val', {acc, val})
+            return acc;
+          }, fakeReducer);
+    };
 
-
-
-
-       return acc
-
-      }, fakeReducer);
-     }
-
-     return dig(fakeReducer, stopAtKey)
+    return dig(fakeReducer, stopAtKey);
   };
 
   /**---------------------------------------------- */
 
-  console.log('what is fakeReducer', fakeReducer)
-  const z = changeInputField({fakeReducer, stopAtKey})
+  console.log("what is fakeReducer", fakeReducer);
+  const z = changeInputField({ fakeReducer, stopAtKey });
 
-
-
-  console.log('what is final', z)
+  console.log("what is final", z);
 
   return (
     <Container
@@ -94,6 +82,8 @@ const App = (): JSX.Element => {
           Increment +
         </Button>
       </Box>
+
+      <SkeletonComponent />
     </Container>
   );
 };
