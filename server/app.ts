@@ -2,7 +2,7 @@ import express from "express";
 
 const app = express();
 
-import Users from './apis/users.js'
+import Users from "./apis/users.js";
 
 const port = 8082;
 
@@ -11,10 +11,6 @@ const port = 8082;
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
-
-
-
-
 
 app.listen(port, () => {
   return console.log(`Express is listening at http://localhost:${port}`);
